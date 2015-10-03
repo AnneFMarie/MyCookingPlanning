@@ -1,10 +1,13 @@
 package com.annef.mycookingplanning.model;
 
+import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.annef.mycookingplanning.R;
+
 /**
- * Created by LAHI8322 on 18/09/2014.
+ * Created by annefrancoisemarie on 30/09/15.
  */
 public class Week implements Parcelable {
 
@@ -13,30 +16,25 @@ public class Week implements Parcelable {
     private int weekNumber;
 
 
-    public static final Parcelable.Creator<Week> CREATOR = new Parcelable.Creator<Week>(){
-        @Override
-        public Week createFromParcel(Parcel source)
-        {
-            return new Week(source);
-        }
-
-        @Override
-        public Week[] newArray(int size)
-        {
-            return new Week[size];
-        }
-    };
-
-    public Week(int weekNumber){
+    public Week(int weekNumber, String default_meal){
         days = new String[3][7];
         for (int i=1; i<3; i++)
             for (int day=0; day<7; day++){
-                days[i][day]="empty";
+                days[i][day]= default_meal;
             }
         this.weekNumber = weekNumber;
     }
 
-    public Week(Parcel in){
+
+    //public Week(long id, String[][] days, int weekNumber){
+    public Week(String[][] days, int weekNumber){
+
+        this.days = days;
+        this.weekNumber = weekNumber;
+    }
+
+    protected Week(Parcel in) {
+
         days = new String[3][7];
         for (int i=1; i<3; i++)
             for (int day=0; day<7; day++){
@@ -45,12 +43,16 @@ public class Week implements Parcelable {
         weekNumber = in.readInt();
     }
 
-    //public Week(long id, String[][] days, int weekNumber){
-    public Week(String[][] days, int weekNumber){
-        this.days = new String[3][7];
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        //parcel.writeLong(id);
+        for (int column=1; column<3; column++)
+            for (int day=0; day<7; day++){
+                dest.writeString(days[column][day]);
 
-        this.days = days;
-        this.weekNumber = weekNumber;
+            }
+
+        dest.writeInt(weekNumber);
     }
 
     @Override
@@ -58,17 +60,18 @@ public class Week implements Parcelable {
         return 0;
     }
 
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        //parcel.writeLong(id);
-        for (int column=1; column<3; column++)
-            for (int day=0; day<7; day++){
-                parcel.writeString(days[column][day]);
+    public static final Creator<Week> CREATOR = new Creator<Week>() {
+        @Override
+        public Week createFromParcel(Parcel in) {
+            return new Week(in);
+        }
 
-            }
+        @Override
+        public Week[] newArray(int size) {
+            return new Week[size];
+        }
+    };
 
-        parcel.writeInt(weekNumber);
-    }
 
     public String getDayText(int column, int day){
         return days[column][day];
@@ -81,4 +84,9 @@ public class Week implements Parcelable {
     public int getNumber() {
         return weekNumber;
     }
+
+    public void setWeekNumber(int weekNumber) {
+        this.weekNumber = weekNumber;
+    }
+
 }

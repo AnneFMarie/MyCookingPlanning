@@ -40,17 +40,254 @@
 
     </RelativeLayout>
 
-
-
-    <GridLayout
-        android:id="@+id/grid"
-        android:layout_width="fill_parent"
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:useDefaultMargins="false"
-        android:alignmentMode="alignBounds"
-        android:columnCount="3"
-        android:background="@drawable/border"
-        >
-    </GridLayout>
+        android:layout_gravity="center_horizontal">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.2"
+                android:layout_height="fill_parent"
+                android:text="Lundi"
+                android:width="90px"
+                android:id="@+id/textJour1"
+                android:background="@drawable/back"
+                android:tag="textJour1"
+                />
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="fill_parent"
+                android:text="Lundi Midi"
+                android:width="150px"
+                android:id="@+id/textMidi1"
+                android:background="@drawable/back" />
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="fill_parent"
+                android:text="Lundi Soir"
+                android:width="150px"
+                android:id="@+id/textSoir1"
+                android:background="@drawable/back" />
+
+
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:text="Mardi"
+                android:width="90px"
+                android:id="@+id/textJour2"
+                android:background="@drawable/back"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Mardi Midi"
+                android:width="150px"
+                android:id="@+id/textMidi2"
+                android:background="@drawable/back" />
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Mardi Soir"
+                android:width="150px"
+                android:id="@+id/textSoir2"
+                android:background="@drawable/back" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:text="Mercredi"
+                android:width="90px"
+                android:id="@+id/textJour3"
+                android:background="@drawable/back"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Mercredi Midi"
+                android:width="150px"
+                android:id="@+id/textMidi3"
+                android:background="@drawable/back" />
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Mercredi Soir"
+                android:width="150px"
+                android:id="@+id/textSoir3"
+                android:background="@drawable/back" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:text="Jeudi"
+                android:width="90px"
+                android:id="@+id/textJour4"
+                android:background="@drawable/back"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Jeudi Midi"
+                android:width="150px"
+                android:id="@+id/textMidi4"
+                android:background="@drawable/back" />
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Jeudi Soir"
+                android:width="150px"
+                android:id="@+id/textSoir4"
+                android:background="@drawable/back" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:text="Vendredi"
+                android:width="90px"
+                android:id="@+id/textJour5"
+                android:background="@drawable/back"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Vendredi Midi"
+                android:width="150px"
+                android:id="@+id/textMidi5"
+                android:background="@drawable/back" />
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Vendredi Soir"
+                android:width="150px"
+                android:id="@+id/textSoir5"
+                android:background="@drawable/back" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:text="Samedi"
+                android:width="90px"
+                android:id="@+id/textJour6"
+                android:background="@drawable/back"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Samedi Midi"
+                android:width="150px"
+                android:id="@+id/textMidi6"
+                android:background="@drawable/back" />
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Samedi Soir bliblablou bliblablou"
+                android:width="150px"
+                android:id="@+id/textSoir6"
+                android:background="@drawable/back" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:text="Dimanche"
+                android:width="95px"
+                android:id="@+id/textJour7"
+                android:background="@drawable/back"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Dimanche Midi"
+                android:width="150px"
+                android:id="@+id/textMidi7"
+                android:background="@drawable/back" />
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:text="Dimanche Soir"
+                android:width="150px"
+                android:id="@+id/textSoir7"
+                android:background="@drawable/back" />
+        </TableRow>
+
+</TableLayout>
+
 
 </LinearLayout>

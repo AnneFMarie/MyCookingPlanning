@@ -1,9 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">MyCookingPlanning</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_launch">Lancer</string>
+    <string name="action_edit">Editer</string>
+    <string name="action_delete">Supprimer</string>
+    <string name="action_copy">Copier</string>
+    <string name="action_paste">Coller</string>
+
+    <string name="title_activity_edit_meal">Edit Meal</string>
+    <string name="title_activity_set_meal">Set Meal</string>
+    <string name="empty_meal">Qu\'est ce qu\'on mange ?</string>
+
 
     <string-array name="Jours">
         <item>Lundi</item>
@@ -13,6 +21,25 @@
         <item>Vendredi</item>
         <item>Samedi</item>
         <item>Dimanche</item>
+    </string-array>
+
+
+    <string-array name="JoursRank">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="seasons">
+        <item>Toutes</item>
+        <item>Printemps</item>
+        <item>Ete</item>
+        <item>Automne</item>
+        <item>Hiver</item>
     </string-array>
 
 </resources>
